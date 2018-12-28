@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akorol <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/26 11:41:51 by akorol            #+#    #+#             */
-/*   Updated: 2018/11/26 18:37:41 by akorol           ###   ########.fr       */
+/*   Created: 2018/11/16 17:46:45 by akorol            #+#    #+#             */
+/*   Updated: 2018/11/25 13:28:34 by akorol           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# define BUFF_SIZE 3
-# include <libc.h>
+#include "libft.h"
 
-#endif
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	int		i;
+	char	*new;
+	int		j;
+	int		len;
+
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	if (!(new = (char *)malloc(len * sizeof(char))))
+		return (NULL);
+	i = -1;
+	j = -1;
+	while (s1[++i])
+		new[i] = s1[i];
+	while (++j + i < len)
+		new[j + i] = s2[j];
+	new[j + i] = '\0';
+	return (new);
+}

@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akorol <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/19 15:35:58 by akorol            #+#    #+#             */
-/*   Updated: 2018/11/23 15:01:58 by akorol           ###   ########.fr       */
+/*   Created: 2018/11/16 17:02:14 by akorol            #+#    #+#             */
+/*   Updated: 2018/11/25 12:58:25 by akorol           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	if (alst != NULL && new != NULL)
-	{
-		new->next = *alst;
-		*alst = new;
-	}
+	char			*baton;
+
+	if (s == NULL)
+		return (NULL);
+	if (!(baton = ft_strnew(len)))
+		return (NULL);
+	return (ft_strncpy(baton, s + start, len));
 }

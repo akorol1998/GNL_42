@@ -6,13 +6,12 @@
 /*   By: akorol <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 13:52:34 by akorol            #+#    #+#             */
-/*   Updated: 2018/11/25 13:55:43 by akorol           ###   ########.fr       */
+/*   Updated: 2018/12/24 13:13:53 by akorol           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -24,7 +23,6 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
-
 char				*ft_replace(char *s1, const char *s2, int len);
 void				ft_putendl(char const *s);
 void				ft_putstr(char const *str);

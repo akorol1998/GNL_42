@@ -6,7 +6,7 @@
 #    By: akorol <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/19 16:52:16 by akorol            #+#    #+#              #
-#    Updated: 2018/11/19 18:18:29 by akorol           ###   ########.fr        #
+#    Updated: 2018/12/22 15:26:23 by akorol           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,5 +95,4 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-https://github.com/mdovhopo/libft/blob/master/Makefile
 

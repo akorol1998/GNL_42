@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akorol <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 17:02:14 by akorol            #+#    #+#             */
-/*   Updated: 2018/11/26 17:10:04 by akorol           ###   ########.fr       */
+/*   Created: 2018/11/26 11:41:51 by akorol            #+#    #+#             */
+/*   Updated: 2018/12/24 13:14:53 by akorol           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFF_SIZE 25
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+int					get_next_line(const int fd, char **line);
+typedef	struct		s_node
 {
-	char			*baton;
-
-	if (s == NULL)
-		return (NULL);
-	if (!(baton = ft_strnew(len)))
-		return (NULL);
-	return (ft_strncpy(baton, s + start, len));
-}
+	char			*data;
+	int				ds;
+	struct s_node	*next;
+}					t_node;
+#endif
